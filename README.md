@@ -1,343 +1,237 @@
 <div align="center">
 
-# ¡Yeti-enes que correr!
-
-### Una defensa está por empezar. El campus tiene otros planes.
-
-**ARCADE · ENDLESS RUNNER 3D · AMBIENTACIÓN UNIVERSITARIA**
-
-[**JUGAR AHORA ↗**](https://katfipol.itch.io/yeti-enes-que-correr)
-&nbsp; · &nbsp;
-[**EXPLORAR EL PORTAL ↗**](https://martinleano72-afk.github.io/yeti-portal/)
+<img src="./assets/readme/cabecera.svg" alt="¡Yeti-enes que correr! Una defensa está por empezar. El campus tiene otros planes." width="100%">
 
 <br>
 
-<img
-  src="./assets/images/portada-juego.png"
-  alt="El Yeti universitario corre por el campus y esquiva obstáculos."
-  width="900"
->
+<a href="https://katfipol.itch.io/yeti-enes-que-correr"><img src="./assets/readme/boton-jugar.svg" alt="Jugar ahora en itch.io" width="235"></a>
+&nbsp;
+<a href="https://martinleano72-afk.github.io/yeti-portal/"><img src="./assets/readme/boton-portal.svg" alt="Explorar el portal web" width="235"></a>
 
-**Salta. Agáchate. Llega a tiempo.**
+**ARCADE · ENDLESS RUNNER 3D · AMBIENTACIÓN UNIVERSITARIA**
 
-Un videojuego universitario desarrollado en Unity y disponible
-para jugar directamente desde el navegador.
+<img src="./assets/images/portada-juego.png" alt="El Yeti corre por el campus y se aproxima a una pila de libros." width="920">
+
+*Salta, agáchate y llega a tiempo a tu defensa de Game Development.*
 
 </div>
 
----
+## Explora el campus
 
-## Explora el proyecto
+**[01 · Historia](#historia)** &nbsp; / &nbsp; **[02 · Personaje](#personaje)** &nbsp; / &nbsp; **[03 · Controles](#controles)** &nbsp; / &nbsp; **[04 · Datos](#datos)** &nbsp; / &nbsp; **[05 · Jugar](#jugar)**
 
-[Historia](#historia) ·
-[Personaje](#personaje) ·
-[Controles](#controles) ·
-[Reglas](#reglas) ·
-[Datos](#datos-del-juego) ·
-[Jugar](#cómo-jugar) ·
-[Portal](#el-portal-web) ·
-[Desarrollo](#desarrollo) ·
-[Créditos](#créditos)
+[El portal web](#el-portal-web) · [Desarrollo](#desarrollo) · [Créditos](#créditos)
 
 ---
 
 ## Historia
 
-El protagonista es un estudiante universitario tranquilo, confiado
-y algo distraído. Al llegar al campus descubre que quedan pocos
-minutos para su defensa de Game Development.
+### 01 / La clase no va a esperar
 
-Su objetivo es llegar al laboratorio a tiempo. Sin embargo, el
-recorrido está lleno de mochilas olvidadas, pilas de libros y
-letreros suspendidos que convierten los pasillos en una carrera
-de reflejos.
+El protagonista es un estudiante tranquilo, confiado y algo distraído. Al llegar al campus descubre que quedan pocos minutos para su defensa de Game Development. Debe atravesar los pasillos y llegar al laboratorio a tiempo.
 
-Cada partida presenta una secuencia diferente de obstáculos.
-La velocidad aumenta y las oportunidades se reducen:
-llegar a la meta depende de las decisiones del jugador.
+El recorrido está lleno de mochilas olvidadas, pilas de libros y letreros suspendidos. La velocidad aumenta y los obstáculos aparecen de forma aleatoria: cada intento propone una carrera diferente.
 
 > **La misión:** alcanzar 1000 puntos conservando al menos una vida.
 
 <div align="center">
 
-<img
-  src="./assets/images/escenario-universidad.png"
-  alt="Pasillos y elementos universitarios que forman parte del escenario."
-  width="800"
->
+<img src="./assets/images/escenario-universidad.png" alt="El Yeti se agacha bajo un cartel en los pasillos universitarios." width="850" loading="lazy">
 
-*El campus universitario se convierte en parte del desafío.*
+*Señalética, aulas y objetos cotidianos forman parte del desafío.*
 
 </div>
 
-[Volver a la navegación ↑](#explora-el-proyecto)
+[Volver a la navegación ↑](#explora-el-campus)
 
 ---
 
 ## Personaje
 
-### El Yeti universitario
+### 02 / Un estudiante fuera de lo común
 
-Un estudiante de pelaje blanco, gran tamaño y chaqueta universitaria
-guinda y gris. Su aspecto tranquilo contrasta con la rapidez necesaria
-para superar el recorrido.
-
-El personaje utiliza un modelo 3D animado con cuatro estados:
-
-| Animación | Cuándo aparece |
-|:---|:---|
-| **Correr** | Durante el recorrido automático |
-| **Saltar** | Al esquivar obstáculos bajos |
-| **Agacharse** | Al pasar bajo los letreros |
-| **Morir** | Al perder todas las vidas |
+Su pelaje blanco, su gran tamaño y su chaqueta guinda y gris lo distinguen en el campus. Su apariencia tranquila contrasta con los reflejos necesarios para superar el recorrido.
 
 <div align="center">
 
-<img
-  src="./assets/images/personaje-yeti.png"
-  alt="Modelo 3D del personaje Yeti con chaqueta universitaria."
-  width="450"
->
+<img src="./assets/images/personaje-yeti.png" alt="Modelo 3D del Yeti universitario, de frente y con chaqueta guinda y gris." width="520" loading="lazy">
+
+**EL YETI UNIVERSITARIO**  
+Protagonista · Modelo 3D · Cuatro animaciones
 
 </div>
 
-[Volver a la navegación ↑](#explora-el-proyecto)
+| Estado | Función en la partida |
+| :--- | :--- |
+| **Correr** | Mantener el recorrido automático |
+| **Saltar** | Superar obstáculos bajos |
+| **Agacharse** | Pasar bajo los letreros reduciendo el área de colisión |
+| **Morir** | Mostrar la caída al perder todas las vidas |
+
+[Volver a la navegación ↑](#explora-el-campus)
 
 ---
 
 ## Controles
 
-El recorrido avanza automáticamente.
-El jugador controla las acciones para esquivar los obstáculos.
+### 03 / Dos teclas y reflejos atentos
 
-| Entrada | Acción | Uso |
-|:---:|:---|:---|
-| <kbd>↑</kbd> | **Saltar** | Superar libros y mochilas |
-| <kbd>↓</kbd> | **Agacharse** | Pasar bajo los carteles |
-| **Clic** | **Interactuar** | Usar menús, reiniciar y controlar el sonido |
+El recorrido avanza automáticamente. El jugador decide cuándo saltar y cuándo agacharse.
 
-**Haz clic dentro del juego antes de utilizar el teclado.**
+| Entrada | Acción | Cuándo utilizarla |
+| :---: | :--- | :--- |
+| <kbd>↑</kbd> | **Saltar** | Ante libros y mochilas |
+| <kbd>↓</kbd> | **Agacharse** | Bajo carteles suspendidos |
+| **Clic** | **Interactuar** | Menús, sonido y reinicio |
 
-La versión actual está pensada para computadora.
-No incluye controles táctiles para celular.
+**Haz clic dentro del juego antes de utilizar las flechas.**
 
-[Volver a la navegación ↑](#explora-el-proyecto)
+### Reglas del recorrido
 
----
-
-## Reglas
-
-### Obstáculos del campus
-
-| Obstáculo | Tipo | Cómo superarlo |
-|:---|:---|:---|
-| **Pilas de libros** | Bajo | Saltar |
-| **Mochilas** | Bajo | Saltar |
-| **Carteles suspendidos** | Alto | Agacharse |
-
-### Durante la partida
-
-- El jugador comienza con **3 vidas**.
+- Comienzas con **3 vidas**.
 - Cada obstáculo que impacta al personaje resta **1 vida**.
-- El puntaje aumenta con el tiempo de supervivencia.
-- Los obstáculos aparecen de forma aleatoria.
-- La velocidad aumenta progresivamente.
-- Los intervalos entre obstáculos se reducen conforme avanza la partida.
-
-### Cómo termina
+- El puntaje aumenta mientras sobrevives.
+- La selección y los intervalos de aparición de obstáculos son aleatorios.
+- La velocidad aumenta y los intervalos entre obstáculos se reducen progresivamente.
+- Los obstáculos superados se eliminan fuera de la vista.
 
 | Resultado | Condición |
-|:---|:---|
+| :--- | :--- |
 | **Victoria** | Alcanzar 1000 puntos |
-| **Derrota** | Perder las 3 vidas |
+| **Fin de la partida** | Perder todas las vidas |
 | **Nuevo intento** | Pulsar «Volver a jugar» al terminar |
 
-[Volver a la navegación ↑](#explora-el-proyecto)
+[Volver a la navegación ↑](#explora-el-campus)
 
 ---
 
-## Datos del juego
+## Datos
 
-<div align="center">
+### 04 / El desafío en números
 
-| **1000** | **3** | **3** | **4** |
-|:---:|:---:|:---:|:---:|
-| Puntos para ganar | Vidas iniciales | Obstáculos temáticos | Animaciones |
-
-</div>
+<img src="./assets/readme/metricas.svg" alt="1000 puntos para ganar, 3 vidas iniciales, 3 obstáculos temáticos y 4 animaciones." width="100%">
 
 | Aspecto | Descripción |
-|:---|:---|
+| :--- | :--- |
 | **Género** | Arcade / Endless Runner |
-| **Personaje** | Yeti universitario en 3D |
-| **Ambientación** | Campus y pasillos universitarios |
+| **Ambientación** | Campus universitario |
+| **Obstáculos** | Libros, mochilas y carteles |
 | **Dificultad** | Progresiva |
 | **Puntaje** | Basado en el tiempo de supervivencia |
-| **Plataforma publicada** | Navegador web |
-| **Controles** | Teclado y ratón |
+| **Plataforma** | Navegador web |
 
-[Volver a la navegación ↑](#explora-el-proyecto)
+**Inicio → Aceleración → Meta**  
+Reconoce los obstáculos, adapta tus reflejos y conserva al menos una vida hasta alcanzar la puntuación objetivo.
+
+[Volver a la navegación ↑](#explora-el-campus)
 
 ---
 
-## Cómo jugar
+## Jugar
 
-### Inicia tu recorrido
-
-1. Abre el juego en itch.io.
-2. Pulsa **Run game** y espera a que termine de cargar.
-3. Selecciona **Jugar**.
-4. Haz clic dentro de la ventana del juego.
-5. Utiliza las flechas para esquivar obstáculos.
+### 05 / Comienza tu carrera
 
 <div align="center">
 
-[**ABRIR ¡YETI-ENES QUE CORRER! ↗**](https://katfipol.itch.io/yeti-enes-que-correr)
+<a href="https://katfipol.itch.io/yeti-enes-que-correr"><img src="./assets/readme/boton-jugar.svg" alt="Jugar ahora en itch.io" width="260"></a>
 
-<br>
+<br><br>
 
-<img
-  src="./assets/images/menu-inicial.png"
-  alt="Menú inicial del juego con los botones Jugar y Sonido."
-  width="750"
->
+<img src="./assets/images/menu-inicial.png" alt="Menú inicial con los botones Jugar y Sonido y la fachada de la universidad de fondo." width="850" loading="lazy">
 
 </div>
 
+1. Abre el juego en itch.io.
+2. Pulsa **Run game** y espera a que termine la carga.
+3. Selecciona **Jugar**.
+4. Haz clic dentro del juego y utiliza las flechas.
+
 <details>
-<summary><strong>Requisitos y recomendaciones</strong></summary>
+<summary><strong>Requisitos y recomendaciones de ejecución</strong></summary>
 
 - Computadora con teclado y ratón.
-- Navegador actualizado con soporte para WebGL 2.
-- Conexión a internet para cargar los archivos.
-- No necesitas instalar Unity.
-- Usa el botón de pantalla completa para ampliar la vista.
-- Si no escuchas audio, revisa el botón de sonido, el volumen
-  del equipo y el sonido de la pestaña del navegador.
+- Navegador actualizado compatible con WebGL 2.
+- Conexión a internet para cargar el juego.
+- No necesitas instalar Unity ni un ejecutable.
+- Utiliza el botón de pantalla completa si deseas ampliar la vista.
+- Si no escuchas audio, comprueba el botón de sonido, el volumen y el sonido de la pestaña.
+- Esta versión no incluye controles táctiles para celular.
 
 </details>
 
-[Volver a la navegación ↑](#explora-el-proyecto)
+[Volver a la navegación ↑](#explora-el-campus)
 
 ---
 
 ## El portal web
 
-El portal presenta el videojuego y reúne su historia, personaje,
-mecánicas, métricas e instrucciones de acceso.
+La página reúne la historia, el personaje, las mecánicas, la infografía y el acceso directo a la compilación web. Su identidad utiliza guinda, crema y gris, con detalles inspirados en la señalética universitaria.
 
-### Secciones disponibles
+Incluye navegación por secciones, menú móvil, enlaces para jugar y distribución adaptable. **El portal se adapta al celular; la partida requiere teclado.**
 
-- **Inicio:** presentación, imagen principal y acceso rápido al juego.
-- **Historia:** contexto narrativo y objetivo del personaje.
-- **Personaje:** apariencia y habilidades del protagonista.
-- **Mecánicas:** controles, obstáculos y reglas.
-- **Datos:** indicadores del diseño del juego.
-- **Jugar:** enlace a la compilación e instrucciones de ejecución.
+<div align="center">
 
-### Diseño e interacción
+<a href="https://martinleano72-afk.github.io/yeti-portal/"><img src="./assets/readme/boton-portal.svg" alt="Visitar el portal de presentación" width="260"></a>
 
-La identidad visual utiliza guinda, crema y gris, con elementos
-inspirados en la señalética y las marcas de los pasillos del campus.
-
-El portal incluye navegación por anclajes, menú móvil, botones
-con estados de interacción y distribución adaptable.
-
-**El portal se adapta a celular; el juego mantiene sus controles
-de teclado para computadora.**
-
-[**VISITAR EL PORTAL ↗**](https://martinleano72-afk.github.io/yeti-portal/)
-
-[Volver a la navegación ↑](#explora-el-proyecto)
-
----
+</div>
 
 ## Desarrollo
 
-### Tecnologías utilizadas
-
-| Tecnología | Función |
-|:---|:---|
-| **Unity y C#** | Desarrollo del videojuego |
-| **Mixamo** | Preparación de animaciones |
-| **HTML** | Estructura y contenido del portal |
-| **CSS** | Identidad visual y diseño adaptable |
-| **JavaScript** | Navegación móvil e interacciones |
+| Tecnología | Uso |
+| :--- | :--- |
+| **Unity y C#** | Videojuego y lógica de partida |
+| **Mixamo** | Animaciones del personaje |
+| **HTML y CSS** | Estructura, identidad visual y diseño adaptable |
+| **JavaScript** | Menú móvil y navegación |
 | **GitHub Pages** | Publicación del portal |
-| **itch.io** | Alojamiento de la compilación web del juego |
+| **itch.io** | Alojamiento del juego WebGL |
 
 <details>
-<summary><strong>Archivos del repositorio</strong></summary>
+<summary><strong>Explorar los archivos del repositorio</strong></summary>
 
-| Archivo o carpeta | Contenido |
-|:---|:---|
-| `index.html` | Secciones y contenido del portal |
-| `style.css` | Estilos y adaptación a diferentes pantallas |
-| `script.js` | Comportamiento del menú y navegación |
-| `assets/images/` | Imágenes del personaje, escenario y juego |
-| `README.md` | Presentación y documentación del proyecto |
+| Ruta | Contenido |
+| :--- | :--- |
+| `index.html` | Contenido y secciones del portal |
+| `style.css` | Diseño y adaptación a diferentes pantallas |
+| `script.js` | Interacciones de navegación |
+| `assets/images/` | Capturas y personaje |
+| `assets/readme/` | Cabecera, botones y métricas de este README |
+| `README.md` | Presentación y documentación |
 
 </details>
 
 <details>
-<summary><strong>Cómo abrir el portal localmente</strong></summary>
+<summary><strong>Abrir el portal en tu computadora</strong></summary>
 
-1. Descarga el repositorio desde **Code → Download ZIP**.
-2. Extrae el archivo ZIP.
-3. Abre `index.html` en tu navegador.
+1. Descarga el repositorio con **Code → Download ZIP**.
+2. Extrae el ZIP.
+3. Abre `index.html` en el navegador.
 
-También puedes abrir la carpeta en Visual Studio Code
-para revisar los archivos y realizar modificaciones.
-
-El enlace para jugar requiere conexión a internet.
+También puedes abrir la carpeta en Visual Studio Code para editarla. El acceso al juego en itch.io requiere internet.
 
 </details>
 
 <details>
-<summary><strong>Cómo actualizar la publicación</strong></summary>
+<summary><strong>Actualizar el portal o el videojuego</strong></summary>
 
-**Para modificar el portal:**
+**Portal:** modifica los archivos, comprueba los cambios y súbelos a la rama configurada en GitHub Pages. Revisa el despliegue en **Actions**.
 
-1. Edita los archivos correspondientes.
-2. Comprueba los cambios localmente.
-3. Sube los archivos actualizados a la rama configurada en Pages.
-4. Revisa el despliegue en la pestaña **Actions**.
-
-**Para modificar el videojuego:**
-
-1. Realiza y prueba los cambios en Unity.
-2. Genera una nueva compilación Web.
-3. Actualiza el ZIP del juego en itch.io.
+**Videojuego:** realiza y prueba los cambios en Unity, genera una nueva compilación Web y actualiza su ZIP en itch.io.
 
 </details>
-
-[Volver a la navegación ↑](#explora-el-proyecto)
-
----
 
 ## Créditos
 
-**Desarrollo del videojuego**
-
-- Melani Quintela Aguilar.
-- José Martin Leaño Mercado.
-
-**Portal web**
-
-- [Martín Leaño](https://github.com/martinleano72-afk).
-
-Proyecto académico de la asignatura **Game Development**.
+**Videojuego:** Melani Quintela Aguilar y José Martin Leaño Mercado.  
+**Portal web:** [Martín Leaño](https://github.com/martinleano72-afk).  
+Proyecto académico de **Game Development**.
 
 ---
 
 <div align="center">
 
-### ¿Listo para llegar a tiempo?
+**EL CAMPUS TE ESPERA. LA DEFENSA TAMBIÉN.**
 
-[**Jugar ahora ↗**](https://katfipol.itch.io/yeti-enes-que-correr)
-&nbsp; · &nbsp;
-[**Visitar el portal ↗**](https://martinleano72-afk.github.io/yeti-portal/)
-&nbsp; · &nbsp;
-[**Volver arriba ↑**](#yeti-enes-que-correr)
+[Jugar ↗](https://katfipol.itch.io/yeti-enes-que-correr) · [Explorar el portal ↗](https://martinleano72-afk.github.io/yeti-portal/) · [Volver arriba ↑](#explora-el-campus)
 
 </div>
