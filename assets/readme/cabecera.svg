@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="320" viewBox="0 0 1100 320" role="img" aria-label="¡Yeti-enes que correr! Portal del videojuego universitario">
+<rect width="1100" height="320" rx="12" fill="#781e3c"/>
+<path d="M775 0H1100V320H960Z" fill="#501329"/>
+<g stroke="#f6f1e7" stroke-opacity=".20" fill="none" stroke-width="2"><path d="M835 259V83H1048V259M818 259H1068M877 259V203H1005V259"/><path d="M853 105H892V139H853ZM914 105H953V139H914ZM975 105H1030V139H975ZM853 158H892V188H853ZM914 158H953V188H914ZM975 158H1030V188H975Z"/></g>
+<text x="54" y="48" fill="#f4cb69" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="3">GAME DEVELOPMENT / CAMPUS UNIVERSITARIO</text>
+<text x="50" y="135" fill="#fffdf8" font-family="Arial,sans-serif" font-size="69" font-weight="900" letter-spacing="-2">¡YETI-ENES</text>
+<text x="50" y="210" fill="#fffdf8" font-family="Arial,sans-serif" font-size="69" font-weight="900" letter-spacing="-2">QUE CORRER!</text>
+<text x="54" y="256" fill="#f6f1e7" font-family="Arial,sans-serif" font-size="18">Una defensa está por empezar. El campus tiene otros planes.</text>
+<g fill="#f4cb69"><path d="M880 36L902 54L880 72H896L918 54L896 36Z"/><path d="M917 36L939 54L917 72H933L955 54L933 36Z"/></g>
+<g fill="#f4cb69"><rect x="54" y="291" width="87" height="5"/><rect x="169" y="291" width="87" height="5"/><rect x="284" y="291" width="87" height="5"/><rect x="399" y="291" width="87" height="5"/></g></svg>
