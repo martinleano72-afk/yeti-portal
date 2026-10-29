@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>¡Yeti-enes que correr! | Portal oficial</title>
+
+  <meta
+    name="description"
+    content="Conoce al Yeti universitario, descubre sus aventuras
+    y juega gratis desde tu navegador."
+  >
+
+  <meta name="theme-color" content="#781e3c">
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">
+    Saltar al contenido
+  </a>
+
+  <!-- Navegación principal del portal. -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        YETI<span> RUNNER</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+        hidden
+      >
+        Menú
+      </button>
+
+      <nav id="menu-principal" aria-label="Navegación principal">
+        <a href="#historia">Historia</a>
+        <a href="#personaje">Personaje</a>
+        <a href="#mecanicas">Mecánicas</a>
+        <a href="#datos">Datos</a>
+        <a class="nav-play" href="#jugar">Jugar ahora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Presentación y acceso rápido al juego. -->
+    <section class="hero section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">ARCADE · ENDLESS RUNNER 3D</p>
+
+          <h1>¡Yeti-enes<br>que correr!</h1>
+
+          <p class="hero-tagline">
+            La defensa está por empezar. El campus tiene otros planes.
+          </p>
+
+          <p class="hero-description">
+            Ayuda a un Yeti universitario a llegar a tiempo a su defensa
+            de Game Development. Salta libros y mochilas, esquiva
+            letreros y conserva tus vidas mientras aumenta la velocidad.
+          </p>
+
+          <div class="button-group">
+            <a
+              class="button button-primary"
+              href="https://katfipol.itch.io/yeti-enes-que-correr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              JUGAR AHORA
+              <span class="sr-only"> en itch.io, en otra pestaña</span>
+            </a>
+
+            <a class="button button-secondary" href="#historia">
+              Conoce la historia
+            </a>
+          </div>
+
+          <dl class="hero-stats">
+            <div>
+              <dt>Meta de victoria</dt>
+              <dd>1000 puntos</dd>
+            </div>
+
+            <div>
+              <dt>Oportunidades</dt>
+              <dd>3 vidas</dd>
+            </div>
+
+            <div>
+              <dt>Controles</dt>
+              <dd>↑ Saltar · ↓ Agacharse</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="./assets/images/portada-juego.png"
+            alt="El Yeti corre por los pasillos de la universidad
+            mientras esquiva obstáculos."
+            fetchpriority="high"
+          >
+          <figcaption>
+            Una carrera contra el tiempo por los pasillos del campus.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- La historia explica el propósito narrativo de la partida. -->
+    <section class="section story-section" id="historia">
+      <div class="container story-grid">
+        <div class="section-copy">
+          <p class="eyebrow">01 / HISTORIA</p>
+          <h2>Una defensa.<br>Demasiados obstáculos.</h2>
+
+          <p>
+            Nuestro protagonista es un estudiante tranquilo, confiado
+            y algo distraído. Al llegar al campus descubre que quedan
+            pocos minutos para su defensa de Game Development:
+            necesita llegar al laboratorio antes de que sea demasiado tarde.
+          </p>
+
+          <p>
+            Los pasillos se convierten en una carrera de reflejos.
+            Mochilas olvidadas, pilas de libros y letreros suspendidos
+            interrumpen su recorrido. Cada decisión cuenta y cada
+            choque reduce sus oportunidades.
+          </p>
+
+          <p>
+            Alcanzar la meta representa llegar a tiempo a la defensa.
+            Perder todas las vidas termina la carrera. La aparición
+            aleatoria de obstáculos hace que cada intento sea diferente.
+          </p>
+        </div>
+
+        <figure class="section-image">
+          <img
+            src="./assets/images/escenario-universidad.png"
+            alt="Escenario universitario con pasillos, señalética
+            y elementos de la vida estudiantil."
+            loading="lazy"
+          >
+          <figcaption>
+            La vida universitaria también forma parte del desafío.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Presentación del modelo y sus habilidades. -->
+    <section class="section character-section" id="personaje">
+      <div class="container character-grid">
+        <figure class="character-visual">
+          <img
+            src="./assets/images/personaje-yeti.png"
+            alt="Modelo del Yeti de pelaje blanco y chaqueta
+            universitaria guinda y gris."
+            loading="lazy"
+          >
+          <figcaption>
+            El Yeti universitario, protagonista de la aventura.
+          </figcaption>
+        </figure>
+
+        <div class="section-copy">
+          <p class="eyebrow">02 / PERSONAJE PRINCIPAL</p>
+          <h2>Un estudiante fuera de lo común.</h2>
+
+          <p>
+            Su pelaje blanco, su gran tamaño y su chaqueta guinda
+            y gris lo distinguen entre los estudiantes del campus.
+            Su apariencia es tranquila, pero llegar a tiempo requiere
+            agilidad y concentración.
+          </p>
+
+          <p>
+            El personaje tiene un modelo 3D animado. Corre de forma
+            continua, salta para superar obstáculos bajos y se agacha
+            para pasar bajo los letreros. Al perder sus vidas,
+            reproduce su animación de caída.
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <strong>Salto:</strong>
+              permite superar libros y mochilas.
+            </li>
+            <li>
+              <strong>Agachado:</strong>
+              reduce la altura del área de colisión.
+            </li>
+            <li>
+              <strong>Cuatro animaciones:</strong>
+              correr, saltar, agacharse y morir.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controles y reglas de la versión publicada. -->
+    <section class="section mechanics-section" id="mecanicas">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">03 / MECÁNICAS Y CONTROLES</p>
+          <h2>Dos teclas. Reflejos atentos.</h2>
+          <p>
+            El recorrido avanza automáticamente.
+            Tú decides cuándo saltar y cuándo agacharte.
+          </p>
+        </div>
+
+        <div class="controls-grid">
+          <article class="control-card">
+            <kbd aria-label="Flecha arriba">↑</kbd>
+            <h3>Saltar</h3>
+            <p>
+              Presiona Flecha Arriba cuando estés en el suelo
+              para superar una pila de libros o una mochila.
+            </p>
+          </article>
+
+          <article class="control-card">
+            <kbd aria-label="Flecha abajo">↓</kbd>
+            <h3>Agacharse</h3>
+            <p>
+              Presiona Flecha Abajo para reducir tu altura
+              temporalmente y pasar bajo los carteles.
+            </p>
+          </article>
+
+          <article class="control-card">
+            <span class="control-label">CLIC</span>
+            <h3>Menús y sonido</h3>
+            <p>
+              Utiliza el ratón para iniciar la partida, volver
+              a jugar y activar o desactivar el sonido.
+            </p>
+          </article>
+        </div>
+
+        <div class="rules-grid">
+          <article class="rules-panel">
+            <h3>Obstáculos del campus</h3>
+
+            <ul>
+              <li>
+                <strong>Libros y mochilas:</strong>
+                obstáculos bajos que debes saltar.
+              </li>
+              <li>
+                <strong>Carteles:</strong>
+                obstáculos altos que debes pasar agachado.
+              </li>
+              <li>
+                <strong>Aparición aleatoria:</strong>
+                varían el tipo de obstáculo y el intervalo de aparición.
+              </li>
+            </ul>
+          </article>
+
+          <article class="rules-panel">
+            <h3>Reglas de la partida</h3>
+
+            <ul>
+              <li>Comienzas con 3 vidas.</li>
+              <li>Cada obstáculo que te golpea resta una vida.</li>
+              <li>El puntaje aumenta mientras sobrevives.</li>
+              <li>
+                La velocidad aumenta y los obstáculos aparecen
+                con mayor frecuencia a medida que avanza la partida.
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="outcomes">
+          <article class="outcome outcome-win">
+            <h3>Victoria</h3>
+            <p>
+              Alcanza 1000 puntos para completar la meta.
+            </p>
+          </article>
+
+          <article class="outcome outcome-lose">
+            <h3>Fin de la partida</h3>
+            <p>
+              Si las vidas llegan a cero, termina el recorrido.
+              Puedes volver a intentarlo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infografía construida con texto legible y adaptable. -->
+    <section class="section data-section" id="datos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 / EL JUEGO EN NÚMEROS</p>
+          <h2>Conoce el desafío.</h2>
+        </div>
+
+        <dl class="metrics-grid">
+          <div class="metric-card">
+            <dt>Puntuación para ganar</dt>
+            <dd>1000<span>puntos</span></dd>
+          </div>
+
+          <div class="metric-card">
+            <dt>Vidas iniciales</dt>
+            <dd>3<span>oportunidades</span></dd>
+          </div>
+
+          <div class="metric-card">
+            <dt>Obstáculos temáticos</dt>
+            <dd>3<span>libros, mochilas y carteles</span></dd>
+          </div>
+
+          <div class="metric-card">
+            <dt>Animaciones del personaje</dt>
+            <dd>4<span>estados de movimiento</span></dd>
+          </div>
+        </dl>
+
+        <div class="progression">
+          <h3>Una dificultad que crece contigo</h3>
+
+          <ol class="progression-steps">
+            <li>
+              <strong>Inicio</strong>
+              <p>
+                Reconoce los obstáculos y practica los controles.
+              </p>
+            </li>
+
+            <li>
+              <strong>Aceleración</strong>
+              <p>
+                Aumenta la velocidad y se reduce el tiempo
+                entre apariciones.
+              </p>
+            </li>
+
+            <li>
+              <strong>Meta</strong>
+              <p>
+                Conserva al menos una vida hasta alcanzar
+                la puntuación de victoria.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acceso a la compilación WebGL alojada en itch.io. -->
+    <section class="section play-section" id="jugar">
+      <div class="container play-grid">
+        <div class="section-copy">
+          <p class="eyebrow">05 / JUGAR AHORA</p>
+          <h2>Tu próxima clase<br>no va a esperar.</h2>
+
+          <p>
+            La versión web está disponible en itch.io.
+            Abre el juego y comienza una nueva carrera,
+            sin instalar Unity ni descargar un ejecutable.
+          </p>
+
+          <a
+            class="button button-primary"
+            href="https://katfipol.itch.io/yeti-enes-que-correr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JUGAR AHORA EN ITCH.IO
+            <span class="sr-only">, abre en otra pestaña</span>
+          </a>
+
+          <div class="requirements">
+            <h3>Qué necesitas</h3>
+
+            <ul>
+              <li>Computadora con teclado y ratón.</li>
+              <li>
+                Navegador actualizado con soporte para WebGL 2.
+              </li>
+              <li>
+                Conexión a internet para cargar los archivos.
+              </li>
+            </ul>
+
+            <p>
+              Esta versión utiliza teclado y no incluye
+              controles táctiles para celular.
+            </p>
+          </div>
+        </div>
+
+        <div class="play-guide">
+          <img
+            src="./assets/images/menu-inicial.png"
+            alt="Menú inicial de ¡Yeti-enes que correr!,
+            con los botones Jugar y Sonido."
+            loading="lazy"
+          >
+
+          <h3>Cómo comenzar</h3>
+
+          <ol>
+            <li>Abre el juego en itch.io.</li>
+            <li>Pulsa <strong>Run game</strong> y espera la carga.</li>
+            <li>Selecciona <strong>Jugar</strong> en el menú.</li>
+            <li>
+              Haz clic dentro del juego para usar las flechas.
+            </li>
+          </ol>
+
+          <p>
+            Usa el botón de pantalla completa para ampliar la vista.
+            Si no escuchas audio, comprueba el botón de sonido
+            y el volumen del navegador.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#inicio">
+          YETI<span> RUNNER</span>
+        </a>
+
+        <p>
+          ¡Yeti-enes que correr! · Proyecto universitario
+          de Game Development.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a
+          href="https://github.com/martinleano72-afk/yeti-portal"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Código del portal
+          <span class="sr-only">, abre en otra pestaña</span>
+        </a>
+
+        <a href="#inicio">Volver al inicio ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

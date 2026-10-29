@@ -1,0 +1,931 @@
+/* Colores del personaje y de la universidad. */
+:root {
+  --guinda: #781e3c;
+  --guinda-oscuro: #501329;
+  --crema: #f6f1e7;
+  --papel: #fffdf8;
+  --tinta: #29272b;
+  --gris: #625d64;
+  --linea: #dcd3c6;
+  --amarillo: #f4cb69;
+  --verde: #246048;
+  --ancho: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  color: var(--tinta);
+  background: var(--crema);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+button,
+.button {
+  touch-action: manipulation;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 5px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+dl {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.12;
+}
+
+p + p {
+  margin-top: 18px;
+}
+
+.container {
+  width: min(var(--ancho), calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 100px;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+  color: var(--guinda);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+h2 {
+  margin-bottom: 26px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+}
+
+.section-copy > p:not(.eyebrow),
+.section-heading > p:not(.eyebrow) {
+  color: var(--gris);
+  max-width: 65ch;
+}
+
+figcaption {
+  padding-top: 14px;
+  color: var(--gris);
+  font-size: 0.82rem;
+}
+
+/* Texto disponible para lectores de pantalla. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: var(--papel);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Encabezado inspirado en la señalética del campus. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--papel);
+  border-top: 5px solid var(--guinda);
+  border-bottom: 1px solid var(--linea);
+}
+
+.header-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  flex-shrink: 0;
+  color: var(--guinda);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+#menu-principal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+#menu-principal a {
+  padding-block: 10px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+#menu-principal a:hover,
+#menu-principal a.is-active {
+  color: var(--guinda);
+}
+
+#menu-principal .nav-play {
+  padding: 11px 18px;
+  color: white;
+  background: var(--guinda);
+  border-radius: 5px;
+}
+
+#menu-principal .nav-play:hover,
+#menu-principal .nav-play.is-active {
+  color: white;
+  background: var(--guinda-oscuro);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Botones claros, grandes y con respuesta al pasar el ratón. */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.button {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 15px 24px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.4;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button-primary {
+  color: white;
+  background: var(--guinda);
+  box-shadow: 0 5px 0 var(--guinda-oscuro);
+}
+
+.button-primary::after {
+  content: "↗";
+  font-size: 1.2rem;
+}
+
+.button-primary:hover {
+  background: var(--guinda-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #36101d;
+}
+
+.button-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--guinda-oscuro);
+}
+
+.button-secondary {
+  color: var(--guinda);
+  border-color: var(--guinda);
+  background: transparent;
+}
+
+.button-secondary:hover {
+  background: #781e3c0c;
+  transform: translateY(-2px);
+}
+
+/* Portada con textura de plano y marcas del corredor. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 76px 100px;
+  background-color: var(--crema);
+  background-image:
+    linear-gradient(#781e3c05 1px, transparent 1px),
+    linear-gradient(90deg, #781e3c05 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 11px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--guinda) 0 78px,
+    transparent 78px 112px,
+    var(--amarillo) 112px 190px,
+    transparent 190px 224px
+  );
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 54px;
+}
+
+.hero h1 {
+  color: var(--guinda);
+  font-size: clamp(3.3rem, 6.5vw, 5.7rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.hero-tagline {
+  max-width: 36ch;
+  margin-top: 26px;
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.hero-description {
+  max-width: 56ch;
+  color: var(--gris);
+  font-size: 0.97rem;
+}
+
+.hero-visual {
+  position: relative;
+  padding: 12px;
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  box-shadow: 16px 16px 0 #781e3c14;
+  transform: rotate(1deg);
+}
+
+.hero-visual::before {
+  content: "CAMPUS / EN PARTIDA";
+  display: block;
+  padding: 3px 4px 12px;
+  color: var(--guinda);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.hero-visual img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #e7dfd3;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 38px;
+  border-top: 1px solid var(--linea);
+}
+
+.hero-stats > div {
+  padding: 18px 12px 0 0;
+}
+
+.hero-stats dt {
+  color: var(--gris);
+  font-size: 0.72rem;
+}
+
+.hero-stats dd {
+  margin: 4px 0 0;
+  font-size: 0.93rem;
+  font-weight: 800;
+}
+
+/* Historia con composición editorial. */
+.story-section {
+  background: var(--papel);
+}
+
+.story-grid,
+.character-grid,
+.play-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 70px;
+}
+
+.section-image img {
+  width: 100%;
+  border-radius: 5px;
+  border-bottom: 8px solid var(--guinda);
+}
+
+.section-image {
+  position: relative;
+}
+
+/* Presentación del personaje como ficha del campus. */
+.character-section {
+  border-block: 1px solid var(--linea);
+}
+
+.character-visual {
+  padding: 24px;
+  background: #252328;
+  border-radius: 8px;
+  border-top: 7px solid var(--guinda);
+}
+
+.character-visual img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.character-visual figcaption {
+  color: #e4dbd7;
+  text-align: center;
+}
+
+.feature-list {
+  display: grid;
+  gap: 18px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.feature-list li {
+  padding-left: 18px;
+  border-left: 3px solid var(--guinda);
+  color: var(--gris);
+}
+
+.feature-list strong {
+  color: var(--tinta);
+}
+
+/* Cada control se presenta como una señal de instrucciones. */
+.mechanics-section {
+  background: var(--papel);
+}
+
+.section-heading {
+  max-width: 740px;
+  margin-bottom: 44px;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.control-card {
+  padding: 30px;
+  background: var(--crema);
+  border-top: 5px solid var(--guinda);
+  border-radius: 0 0 6px 6px;
+}
+
+kbd,
+.control-label {
+  min-width: 62px;
+  min-height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 8px 14px;
+  color: var(--guinda);
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-bottom: 5px solid #c9bca9;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.control-label {
+  font-size: 0.85rem;
+}
+
+.control-card p,
+.rules-panel li,
+.outcome p {
+  color: var(--gris);
+  font-size: 0.95rem;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px;
+  margin-top: 48px;
+}
+
+.rules-panel {
+  padding-top: 26px;
+  border-top: 1px solid var(--linea);
+}
+
+.rules-panel ul,
+.requirements ul {
+  padding-left: 20px;
+}
+
+.rules-panel li + li,
+.requirements li + li {
+  margin-top: 12px;
+}
+
+li::marker {
+  color: var(--guinda);
+}
+
+.outcomes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.outcome {
+  padding: 24px;
+  border-left: 4px solid var(--guinda);
+  background: #781e3c07;
+}
+
+.outcome-win {
+  border-color: var(--verde);
+  background: #24604809;
+}
+
+.outcome-win h3 {
+  color: var(--verde);
+}
+
+.outcome-lose h3 {
+  color: var(--guinda);
+}
+
+/* Infografía con números grandes y recorrido de dificultad. */
+.data-section {
+  color: var(--papel);
+  background: var(--guinda);
+}
+
+.data-section .eyebrow {
+  color: var(--amarillo);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.metric-card {
+  padding-block: 24px;
+  border-top: 1px solid #ffffff60;
+}
+
+.metric-card dt {
+  min-height: 48px;
+  color: #f1dce3;
+  font-size: 0.87rem;
+}
+
+.metric-card dd {
+  margin: 12px 0 0;
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.metric-card dd span {
+  display: block;
+  margin-top: 16px;
+  color: #f1dce3;
+  font-size: 0.84rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.progression {
+  margin-top: 42px;
+  padding-top: 32px;
+  border-top: 1px solid #ffffff45;
+}
+
+.progression-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+  counter-reset: tramo;
+}
+
+.progression-steps li {
+  counter-increment: tramo;
+}
+
+.progression-steps li::before {
+  content: "0" counter(tramo) " →";
+  display: block;
+  margin-bottom: 12px;
+  color: var(--amarillo);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.progression-steps strong {
+  font-size: 1.1rem;
+}
+
+.progression-steps p {
+  margin-top: 10px;
+  color: #f1dce3;
+  font-size: 0.9rem;
+}
+
+/* Última sección: acceso al juego e instrucciones. */
+.play-section {
+  background: var(--papel);
+}
+
+.play-section .button {
+  margin-top: 28px;
+}
+
+.requirements {
+  margin-top: 36px;
+  padding-top: 26px;
+  border-top: 1px solid var(--linea);
+}
+
+.requirements li,
+.requirements p,
+.play-guide p,
+.play-guide li {
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
+.play-guide {
+  padding: 24px;
+  background: var(--crema);
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+}
+
+.play-guide img {
+  width: 100%;
+  margin-bottom: 28px;
+  border-radius: 4px;
+}
+
+.play-guide ol {
+  padding-left: 22px;
+}
+
+.play-guide li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.site-footer {
+  padding-block: 36px;
+  border-top: 1px solid var(--linea);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.site-footer p {
+  margin-top: 10px;
+  color: var(--gris);
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 0.82rem;
+}
+
+.footer-links a {
+  text-underline-offset: 5px;
+}
+
+/* Tabletas y portátiles pequeños. */
+@media (max-width: 1100px) {
+  .hero-grid {
+    gap: 32px;
+  }
+
+  .story-grid,
+  .character-grid,
+  .play-grid {
+    gap: 40px;
+  }
+
+  #menu-principal {
+    gap: 16px;
+  }
+
+  .controls-grid {
+    gap: 16px;
+  }
+
+  .control-card {
+    padding: 24px;
+  }
+}
+
+/* El menú solo se pliega cuando JavaScript está disponible. */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0;
+    padding-block: 14px;
+  }
+
+  #menu-principal {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding-top: 16px;
+  }
+
+  .js-menu .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 8px 16px;
+    color: var(--guinda);
+    background: transparent;
+    border: 1px solid var(--guinda);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .js-menu #menu-principal {
+    display: none;
+  }
+
+  .js-menu #menu-principal.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #menu-principal a {
+    min-height: 44px;
+  }
+
+  .hero-grid,
+  .story-grid,
+  .character-grid,
+  .play-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    max-width: 690px;
+  }
+
+  .hero-visual {
+    width: min(100%, 730px);
+    margin-top: 12px;
+    transform: none;
+  }
+
+  .character-visual {
+    max-width: 560px;
+    margin-inline: auto;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Teléfonos: lectura cómoda y botones fáciles de pulsar. */
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .section {
+    padding-block: 64px;
+  }
+
+  .hero {
+    padding-block: 48px 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.3rem);
+  }
+
+  .hero-tagline {
+    font-size: 1.08rem;
+  }
+
+  .eyebrow {
+    font-size: 0.67rem;
+    letter-spacing: 0.11em;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .hero-stats > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--linea);
+  }
+
+  .hero-stats dd {
+    text-align: right;
+  }
+
+  .hero-visual {
+    box-shadow: 7px 7px 0 #781e3c14;
+  }
+
+  .controls-grid,
+  .rules-grid,
+  .outcomes,
+  .progression-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .rules-grid {
+    gap: 24px;
+  }
+
+  .control-card {
+    padding: 26px;
+  }
+
+  .metrics-grid {
+    gap: 18px;
+  }
+
+  .metric-card dt {
+    min-height: 58px;
+    font-size: 0.8rem;
+  }
+
+  .metric-card dd {
+    font-size: 3.2rem;
+  }
+
+  .character-visual,
+  .play-guide {
+    padding: 16px;
+  }
+
+  .play-section .button {
+    width: 100%;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+/* Respeta la preferencia de reducir movimientos. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
